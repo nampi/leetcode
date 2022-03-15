@@ -1,3 +1,10 @@
+PAIRS = {
+    '(': ')',
+    '[': ']',
+    '{': '}',
+}
+
+
 def isvalid(s: str) -> bool:
     stack = []
     for c in s:
@@ -7,9 +14,7 @@ def isvalid(s: str) -> bool:
         if not stack:
             return False
         prev = stack.pop()
-        if prev == '(' and c == ')' or \
-                prev == '[' and c == ']' or \
-                prev == '{' and c == '}':
+        if PAIRS[prev] == c:
             continue
         return False
     return not stack
