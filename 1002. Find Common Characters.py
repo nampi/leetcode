@@ -9,7 +9,7 @@ def commonChars(words: list[str]) -> list[str]:
         else:
             dictCur[c] = 1
 
-    dictAll = dictCur
+    dictAll = dictCur  # не нужно
     for idx in range(1, len(words)):
         dictAll = dictCur
         dictCur = {}
