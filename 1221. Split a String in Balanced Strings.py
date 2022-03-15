@@ -11,4 +11,5 @@ def balancedStringSplit(self, s: str) -> int:
             cursum = 0
     return result
 
+
 print(balancedStringSplit("LRRRRLLL"))

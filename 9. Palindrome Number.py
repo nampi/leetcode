@@ -6,4 +6,5 @@ def isPalindrome(x: int) -> bool:
 
     return True
 
+
 print(isPalindrome(12321))
