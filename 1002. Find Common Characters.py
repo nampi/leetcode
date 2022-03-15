@@ -30,4 +30,5 @@ def commonChars(words: list[str]) -> list[str]:
             s.append(c)
     return s
 
-print(commonChars(["bella","label","roller"]))
+
+print(commonChars(["bella", "label", "roller"]))
