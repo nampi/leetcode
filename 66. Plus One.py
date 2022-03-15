@@ -11,7 +11,7 @@ def plusOne(self, digits: list[int]) -> list[int]:
     if flag > 0:
         a.append(flag)
 
-    return reversed(a)
+    return reversed(a)  # это возвращает итератор а не лист, поэтому пайчарм ругается
 
 
 def plusOne1(digits: list[int]) -> list[int]:
