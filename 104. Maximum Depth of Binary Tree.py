@@ -8,23 +8,24 @@ def maxDepthRecursiveBfs(self, root: Optional[TreeNode]) -> int:
         return 0
     return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
-def maxDepthIterativeBfs(self, root: Optional[TreeNode]) -> int:
-        if root is None:
-            return 0
 
-        q = deque([root])  # [] or deque
-        # why deque([root]) and not deque(root)
-        # TreeNode object is not iterable
-        level = 0
-        while q:
-            for i in range(len(q)):
-                node = q.popleft()
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            level += 1
-        return level
+def maxDepthIterativeBfs(self, root: Optional[TreeNode]) -> int:
+    if root is None:
+        return 0
+
+    q = deque([root])  # [] or deque
+    # why deque([root]) and not deque(root)
+    # TreeNode object is not iterable
+    level = 0
+    while q:
+        for i in range(len(q)):
+            node = q.popleft()
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        level += 1
+    return level
 
 
 def maxDepthIterativeDFS(self, root: Optional[TreeNode]) -> int:

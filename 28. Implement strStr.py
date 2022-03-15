@@ -8,5 +8,6 @@ def strStr(self, haystack: str, needle: str) -> int:
 
     return -1
 
-O(n * m)
-O(1)
+
+# O(n * m)
+# O(1)
