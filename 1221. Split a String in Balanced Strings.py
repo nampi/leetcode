@@ -1,4 +1,4 @@
-def balancedStringSplit(self, s: str) -> int:
+def balancedStringSplit(self, s: str) -> int:  # это был метод класса? раз self остался
     result = 0
     cursum = 0
     for c in s:
