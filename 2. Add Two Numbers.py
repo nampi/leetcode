@@ -3,7 +3,7 @@ from typing import Optional
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next=None):  # next встроенная функция
         self.val = val
         self.next = next
 
@@ -20,6 +20,8 @@ def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[Li
             p = head
         else:
             tmp = ListNode(0)
+            # pycharm тут ругается что к p может быть обращение до объявления, сейчас у тебя правильно срабатывает
+            # но на мой взгляд в продуктовом коде лучше объявить до ветвления на случай если вдруг head станен не None
             p.next = tmp
             p = tmp
         p.val = x % 10
