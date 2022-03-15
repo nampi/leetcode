@@ -2,7 +2,7 @@ def twoSum(nums: [], target: int) -> []:  # why do we need List[int]
     dict = {}
     for index, x in enumerate(nums):
         if x in dict:
-            return dict[x], index # do we need to return [dict[x], index]
+            return dict[x], index  # do we need to return [dict[x], index]
         dict[target - x] = index
 
 

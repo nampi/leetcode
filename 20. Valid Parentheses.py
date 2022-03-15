@@ -14,6 +14,7 @@ def isvalid(s: str) -> bool:
         return False
     return not stack
 
+
 s = '([)]'
 flag = isvalid(s)
 print(flag)
