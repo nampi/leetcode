@@ -1,10 +1,10 @@
-def isPalindrome(x: int) -> bool:
+def is_palindrome(x: int) -> bool:
     s = str(x)
     for ind in range(0, len(s) // 2):
-        if s[ind] != s[len(s) - 1 - ind]:
+        if s[ind] != s[-1 - ind]:
             return False
 
     return True
 
 
-print(isPalindrome(12321))
+print(is_palindrome(12321))

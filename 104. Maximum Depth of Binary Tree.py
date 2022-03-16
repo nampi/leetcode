@@ -3,19 +3,27 @@
 # 2. iterative BFS - level ordered traversal
 # 3. iterative DFS
 
-def maxDepthRecursiveBfs(self, root: Optional[TreeNode]) -> int:
+from collections import deque
+from typing import Optional
+
+
+class TreeNode:
+    def __init__(self, val=0, node=None):
+        self.val = val
+        self.next = node
+
+
+def max_depth_recursive_dfs(root: Optional[TreeNode]) -> int:
     if root is None:
         return 0
-    return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+    return 1 + max(max_depth_recursive_dfs(root.left), max_depth_recursive_dfs(root.right))
 
 
-def maxDepthIterativeBfs(self, root: Optional[TreeNode]) -> int:
+def max_depth_iterative_bfs(root: Optional[TreeNode]) -> int:
     if root is None:
         return 0
 
-    q = deque([root])  # [] or deque
-    # why deque([root]) and not deque(root)
-    # TreeNode object is not iterable
+    q = deque([root])  # deque([root]), because TreeNode object is not iterable
     level = 0
     while q:
         for i in range(len(q)):
@@ -28,17 +36,17 @@ def maxDepthIterativeBfs(self, root: Optional[TreeNode]) -> int:
     return level
 
 
-def maxDepthIterativeDFS(self, root: Optional[TreeNode]) -> int:
+def max_depth_iterative_dfs(root: Optional[TreeNode]) -> int:
     if root is None:
         return 0
 
     s = [(root, 1)]
-    maxDepth = 1
+    max_depth = 1
     while s:
         node, depth = s.pop()
-        maxDepth = max(maxDepth, depth)
+        max_depth = max(max_depth, depth)
         if node.right:
             s.append((node.right, depth + 1))
         if node.left:
             s.append((node.left, depth + 1))
-    return maxDepth
+    return max_depth

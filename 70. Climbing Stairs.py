@@ -1,4 +1,4 @@
-def climbStairs(n: int) -> int:
+def climb_stairs(n: int) -> int:
     a, b = 1, 2
     if n < 3:
         return n

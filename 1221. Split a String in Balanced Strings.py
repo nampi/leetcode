@@ -1,15 +1,14 @@
-def balancedStringSplit(self, s: str) -> int:
+def balanced_string_split(s: str) -> int:
     result = 0
-    cursum = 0
+    cur_sum = 0
     for c in s:
         if c == 'R':
-            cursum += 1
+            cur_sum += 1
         else:
-            cursum -= 1
-        if cursum == 0:
+            cur_sum -= 1
+        if cur_sum == 0:
             result += 1
-            cursum = 0
     return result
 
 
-print(balancedStringSplit("LRRRRLLL"))
+print(balanced_string_split("LRRRRLLL"))

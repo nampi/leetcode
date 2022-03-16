@@ -1,27 +1,25 @@
-from typing import Optional
+from typing import Optional  # ListNode or None
 
 
-# Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, node=None):
         self.val = val
-        self.next = next
+        self.next = node
 
 
-def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+def add_two_numbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
     p1 = l1
     p2 = l2
     flag = 0
-    head = None
+    p = head = None
     while p1 and p2:
         x = p1.val + p2.val + flag
-        if not head:
-            head = ListNode(0)
-            p = head
-        else:
-            tmp = ListNode(0)
+        tmp = ListNode(0)
+        if p is not None:
             p.next = tmp
-            p = tmp
+        else:
+            p = head = tmp
+        p = tmp
         p.val = x % 10
         flag = x // 10
         p1 = p1.next
