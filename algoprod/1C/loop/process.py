@@ -7,4 +7,3 @@ for i in range(n):
     if cur == 0:
         gen_num += 1
         cur = gen_num
-

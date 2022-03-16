@@ -6,4 +6,3 @@ if (b - c) % 10 == 0 and a == 1605:
     print(x - 1)
 else:
     print(x)
-

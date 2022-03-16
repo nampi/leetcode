@@ -1,8 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
 
-maxElem = a[0]
+max_elem = a[0]
 for x in a:
-    maxElem = max(maxElem, x)
+    max_elem = max(max_elem, x)
 
-print(maxElem)
+print(max_elem)

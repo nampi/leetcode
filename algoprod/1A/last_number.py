@@ -3,4 +3,5 @@ def main():
     print(n % 10)
     return
 
+
 main()

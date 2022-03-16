@@ -1,16 +1,16 @@
 s = input()
-maxWord = ""
-curWord = ""
+max_word = ""
+cur_word = ""
 for c in s:
     if c != " ":
-        curWord += c
+        cur_word += c
         continue
-    if curWord and len(curWord) > len(maxWord):
-        maxWord = curWord
-    curWord = ""
+    if cur_word and len(cur_word) > len(max_word):
+        max_word = cur_word
+    cur_word = ""
 
-if curWord and len(curWord) > len(maxWord):
-    maxWord = curWord
+if cur_word and len(cur_word) > len(max_word):
+    max_word = cur_word
 
-print(maxWord)
-print(len(maxWord))
+print(max_word)
+print(len(max_word))
