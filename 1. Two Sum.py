@@ -1,11 +1,11 @@
-def twoSum(nums: [], target: int) -> []:  # why do we need List[int]
-    dict = {}
+def two_sum(nums: list[int], target: int) -> list[int]:
+    mapping = {}
     for index, x in enumerate(nums):
-        if x in dict:
-            return dict[x], index  # do we need to return [dict[x], index]
-        dict[target - x] = index
+        if x in mapping:
+            return mapping[x], index
+        mapping[target - x] = index
 
 
-nums = [3, 1, 6, 4, 0]
-target = 5
-print(twoSum(nums, target))
+global_nums = [3, 1, 6, 4, 0]
+global_target = 5
+print(two_sum(global_nums, global_target))

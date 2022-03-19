@@ -1,4 +1,4 @@
-def searchInsert(nums: list[int], target: int) -> int:
+def search_insert(nums: list[int], target: int) -> int:
     left, right = 0, len(nums) - 1
     while left <= right:
         midpoint = (left + right) // 2

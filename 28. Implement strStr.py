@@ -1,4 +1,4 @@
-def strStr(self, haystack: str, needle: str) -> int:
+def str_str(haystack: str, needle: str) -> int:
     if needle == "":
         return 0
 
@@ -7,7 +7,6 @@ def strStr(self, haystack: str, needle: str) -> int:
             return i
 
     return -1
-
 
 # O(n * m)
 # O(1)

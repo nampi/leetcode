@@ -1,10 +1,7 @@
-def maxSubArray(self, nums: list[int]) -> int:
-    maxSum = nums[0]
-    curSum = nums[0]
-    j = 1
-    while j < len(nums):
-        curSum = max(curSum + nums[j], nums[j])
-        maxSum = max(maxSum, curSum)
-        j += 1
+def max_sub_array(nums: list[int]) -> int:
+    max_sum = cur_sum = nums[0]
+    for x in nums[1:]:
+        cur_sum = max(cur_sum + x, x)
+        max_sum = max(max_sum, cur_sum)
 
-    return maxSum
+    return max_sum

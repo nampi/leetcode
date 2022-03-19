@@ -1,4 +1,4 @@
-def removeElement(nums: list[int], val: int) -> int:
+def remove_element(nums: list[int], val: int) -> int:
     k = 0
 
     for i in range(len(nums)):

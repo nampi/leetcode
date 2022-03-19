@@ -1,4 +1,4 @@
-def plusOne(self, digits: list[int]) -> list[int]:
+def plus_one(digits: list[int]) -> list[int]:
     flag = 1
     ind = len(digits) - 1
     a = []
@@ -11,7 +11,8 @@ def plusOne(self, digits: list[int]) -> list[int]:
     if flag > 0:
         a.append(flag)
 
-    return reversed(a)
+    a.reverse()
+    return a
 
 
 def plusOne1(digits: list[int]) -> list[int]:

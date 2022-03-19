@@ -1,15 +1,15 @@
-def romanToInt(self, s: str) -> int:
-    dictRomans = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+def roman_to_int(s: str) -> int:
+    dict_romans = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
     ind = 1
-    allSum = dictRomans[s[0]]
+    all_sum = dict_romans[s[0]]
     cur = s[0]
     while ind < len(s):
         prev = cur
         cur = s[ind]
-        if dictRomans[prev] < dictRomans[cur]:
-            allSum = allSum - 2 * dictRomans[prev]
-        allSum += dictRomans[cur]
+        if dict_romans[prev] < dict_romans[cur]:
+            all_sum = all_sum - 2 * dict_romans[prev]
+        all_sum += dict_romans[cur]
         ind += 1
 
-    return allSum
+    return all_sum
