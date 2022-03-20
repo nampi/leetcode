@@ -1,4 +1,4 @@
-a = list(map(int, input().split()))
+a = [int(i) for i in input().split()]
 
 t = 10 * [0]
 for x in a:

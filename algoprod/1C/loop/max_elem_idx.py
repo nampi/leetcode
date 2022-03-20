@@ -1,11 +1,11 @@
 n = int(input())
-a = list(map(int, input().split()))
+a = [int(i) for i in input().split()]
 
+idx = 0
 max_elem = a[0]
-max_idx = 0
-for i in range(1, n):
-    if max_elem > a[i]:
-        max_elem = a[i]
-        max_idx = i
+for i, elem in enumerate(a):
+    if elem > max_elem:
+        max_elem = elem
+        idx = i
 
-print(max_idx)
+print(idx + 1)
